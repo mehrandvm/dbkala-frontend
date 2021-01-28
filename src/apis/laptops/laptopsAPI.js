@@ -1,3 +1,3 @@
 import axiosInstance from "../axiosConfig"
 
-export const getLaptops = async (query) => await axiosInstance.get(`/laptops?name=${query}`)
+export const getSearch = async (query) => await axiosInstance.get(`/search?name=${query}`)

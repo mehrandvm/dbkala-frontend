@@ -12,7 +12,7 @@ import Accordion from "@material-ui/core/Accordion"
 import AccordionSummary from "@material-ui/core/AccordionSummary"
 import AccordionDetails from "@material-ui/core/AccordionDetails"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import { getLaptops } from "../apis/laptops/laptopsAPI"
+import { getSearch } from "../apis/laptops/laptopsAPI"
 import { useStyles } from "./homeStyles"
 
 import RadioFilter from "./filters/radioFilter"
@@ -89,7 +89,7 @@ const Home = () => {
   const [filters, setFilters] = useState(filtersInitialState)
 
   const sendSearchRequest = () =>
-    getLaptops(searchQuery).then((res) => {
+    getSearch(searchQuery).then((res) => {
       setData(res.data)
     }).catch((err) => console.error("fetch-error", err))
 
